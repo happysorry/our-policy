@@ -108,10 +108,21 @@ class State():作為空白狀態的class
 :::
 
 ## 啟動步驟
+1.建立Docker 環境
+[參考這篇](https://hackmd.io/bMI9DG9ASmmdvG3h0kN2lA?edit)
+2.依照docker machine IP修改程式中的IP，需要修改的有
+ql3.java、send_req.java、health_check.java
+3.設定start.java中相關參數
+iter:訓練的epoch數
+max_iter:每個epoch的學習步數
+input_file:訓練的workload
+4.調整ql3(qlearning agent)相關參數
+alpha:learning rate
+gamma:
+wres、wperf:resource cost跟performance cost所佔的比例
+5.執行start.java啟動訓練
 
-
-
-
+* 注意，一次訓練多個epoch時，他們的數據都會保存在同一個txt檔案裡面要自己分類
 
 
 
